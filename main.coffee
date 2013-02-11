@@ -1,9 +1,12 @@
+
+
 if (Meteor.isServer) 
   Meteor.startup ->
 
-    # Used to clear out any existing players
+    # Clear the database
     # Players.remove({})
 
+    # Seed the db if it's empty :
     if Players.find().count() == 0 
 
       names = [

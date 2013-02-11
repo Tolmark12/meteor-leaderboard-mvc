@@ -1,7 +1,6 @@
-
 if (Meteor.isClient) 
 
-  # ----------- Template User Events:
+  # ----------- Events handlers :
 
   Template.main.events(
     'click input#incrament' : ->
@@ -9,7 +8,7 @@ if (Meteor.isClient)
   )
 
   
-  # ----------- Template accessors
+  # ----------- View accessors :
 
   Template.main.selected_name = ->
     player = Players.findOne( Session.get("selected_player") )
