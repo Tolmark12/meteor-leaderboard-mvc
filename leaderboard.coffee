@@ -4,7 +4,7 @@
 if (Meteor.isServer) 
   Meteor.startup ->
 
-    # Clear the database
+    # Uncomment to clear the database
     # Players.remove({})
 
     if Players.find().count() == 0 
