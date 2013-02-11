@@ -1,5 +1,5 @@
 
-# On the server, seed the db if it's empty
+# Seed the db if it's empty : 
 
 if (Meteor.isServer) 
   Meteor.startup ->

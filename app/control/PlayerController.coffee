@@ -1,3 +1,4 @@
+
 if (Meteor.isClient) 
 
   view = Template.player
