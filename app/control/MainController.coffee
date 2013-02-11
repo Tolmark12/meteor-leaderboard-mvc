@@ -1,6 +1,7 @@
 
 if (Meteor.isClient) 
 
+  # app/view/main.html
   view = Template.main
 
   # ----------- Events handlers :
