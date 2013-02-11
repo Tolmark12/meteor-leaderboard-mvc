@@ -1,8 +1,11 @@
+
 if (Meteor.isClient) 
+
+  view = Template.main
 
   # ----------- Events handlers :
 
-  Template.main.events(
+  view.events(
     'click input#incrament' : ->
       Players.update( Session.get("selected_player"), {$inc : {score : 5} } )
   )
@@ -10,9 +13,9 @@ if (Meteor.isClient)
   
   # ----------- View accessors :
 
-  Template.main.selected_name = ->
+  view.selected_name = ->
     player = Players.findOne( Session.get("selected_player") )
     return player && player.name
 
-  Template.main.players = ->
+  view.players = ->
     return Players.find( {}, {sort: {score: -1, name: 1}} )

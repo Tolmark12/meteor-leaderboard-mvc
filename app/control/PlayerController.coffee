@@ -1,8 +1,10 @@
 if (Meteor.isClient) 
 
+  view = Template.player
+
   # ----------- Events Handlers :
 
-  Template.player.events(
+  view.events(
     'click': ->
       Session.set "selected_player", this._id
   )
@@ -10,6 +12,6 @@ if (Meteor.isClient)
 
   # ----------- View Accessors :
 
-  Template.player.selected = ->
+  view.selected = ->
     return if Session.equals("selected_player", this._id) then "selected" else ''
   
