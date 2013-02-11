@@ -1,6 +1,7 @@
 
 if (Meteor.isClient) 
 
+  # app/view/player.html
   view = Template.player
 
   # ----------- Events Handlers :
