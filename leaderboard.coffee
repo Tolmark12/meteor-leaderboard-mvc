@@ -1,11 +1,12 @@
 
+# On the server, seed the db if it's empty
+
 if (Meteor.isServer) 
   Meteor.startup ->
 
     # Clear the database
     # Players.remove({})
 
-    # Seed the db if it's empty :
     if Players.find().count() == 0 
 
       names = [
